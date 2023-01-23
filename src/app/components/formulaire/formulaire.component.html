@@ -1,0 +1,17 @@
+<form #heroForm="ngForm" (ngSubmit)="add(heroForm)">
+
+  <div class="row">
+    <div class="col-md-6">
+      <app-input [label]="titre"  [name]="titre"  (inputEvent)="getInputTitre($event)"></app-input>
+    </div>
+    <div class="col-md-6">
+      <app-input  [label]="description"  [name]="description"    (inputEvent)="getInputDescription($event)"></app-input>
+    </div>
+  </div>
+  <button type="submit">Ajouter</button>
+  <!-- <app-button></app-button> -->
+</form>
+
+<br>
+<hr>
+<app-table></app-table>
